@@ -98,9 +98,3 @@ sobreescribir.
 - **Persistencia:** los datos de PostgreSQL se guardan en un volumen Docker
   (`db_data`), por lo que sobreviven a reinicios (`docker compose restart` /
   `docker compose up` posteriores) mientras no se use `down -v`.
-- **Regenerar los ejecutables:** si el código fuente cambia, hay que volver a
-  compilar el backend (`./mvnw clean package -DskipTests` en
-  `backend-ml-multivariate/`) y el frontend (`npm run build` en
-  `frontend-ml-multivariate/`), y copiar de nuevo los artefactos generados a
-  `app-container/backend/` y `app-container/frontend/browser/`
-  (recordando copiar `index.csr.html` como `index.html`).
