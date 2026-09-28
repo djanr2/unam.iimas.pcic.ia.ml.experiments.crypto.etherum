@@ -48,11 +48,22 @@ Una vez arriba:
 - Frontend: http://localhost:4200
 - Backend (API): http://localhost:8080
 
-Para detener todo:
+Para detener todo (conserva los datos de la base de datos):
 
 ```bash
 docker compose down
 ```
+
+Para volver a encenderlo después, ya sin reconstruir (arranque rápido):
+
+```bash
+docker compose up -d
+```
+
+`-d` lo corre en segundo plano; si se omite, se queda mostrando los logs en
+la terminal. Solo hace falta volver a usar `--build` si se reemplazan los
+ejecutables dentro de `app-container/` (ver "Regenerar los ejecutables" más
+abajo).
 
 Para detener y borrar también los datos de la base de datos (reinicio limpio):
 
